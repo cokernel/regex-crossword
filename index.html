@@ -1,68 +1,32 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Regex-crossword : Implementation of a RegExp crossword.">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Regex-crossword</title>
+    <title>RegEx Crossword</title>
+    <!-- meta http-equiv="refresh" content="1" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="crossword.js"></script>
+    <link rel="stylesheet" type="text/css" href="crossword.css">
   </head>
-
   <body>
+    It's a crossword puzzle where you need to fill in the hexes with character sequences, so that they match the regular expressions listed around the edges.<br/>
+    The individual clues will turn <span class="match">green</span> when satisfied, <span class="nomatch">red</span> when not.<br/>
+    <input type="button" value="Reset" id="reset"></input>
+    <table id="board_table">
+      <tr><td id="board" align="center">
+      </td>
+    </table>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/cokernel/regex-crossword">View on GitHub</a>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
-          <h1 id="project_title">Regex-crossword</h1>
-          <h2 id="project_tagline">Implementation of a RegExp crossword.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/cokernel/regex-crossword/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/cokernel/regex-crossword/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="regex-crossword" class="anchor" href="#regex-crossword" aria-hidden="true"><span class="octicon octicon-link"></span></a>regex-crossword</h1>
-
-<p>Implementation of a RegExp crossword.</p>
-
-<p>View the current version at <a href="http://jimbly.github.com/regex-crossword/">http://jimbly.github.com/regex-crossword/</a></p>
-
-<p>Original puzzle from <a href="http://www.i-programmer.info/news/144-graphics-and-games/5450-can-you-do-the-regular-expression-crossword.html">http://www.i-programmer.info/news/144-graphics-and-games/5450-can-you-do-the-regular-expression-crossword.html</a></p>
-
-<h1>
-<a id="todo-list" class="anchor" href="#todo-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO List</h1>
-
-<ul>
-<li>Auto-check against known solution</li>
-<li>Allow choosing between multiple crosswords puzzles</li>
-<li>Allow users to save their own puzzles and load other people's</li>
-<li>Track time spent solving puzzle</li>
-<li>Rotate buttons</li>
-<li>Undo/redo</li>
-</ul>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Regex-crossword maintained by <a href="https://github.com/cokernel">cokernel</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+    Javascript implementation by <a href="https://github.com/Jimbly">Jimb Esser</a>.  Source code available on <a href="https://github.com/Jimbly/regex-crossword">GitHub</a>, fork and add your own puzzles!<br/>
+    Original puzzle from: <a href="http://www.i-programmer.info/news/144-graphics-and-games/5450-can-you-do-the-regular-expression-crossword.html">http://www.i-programmer.info/news/144-graphics-and-games/5450-can-you-do-the-regular-expression-crossword.html</a><br/>
+    Solution available <a href="http://z.manicsages.org/puzzle/uploads/puzzle_files/50d697158c9cf.svg">here</a>.
+    <br/>
+    Best viewed in <a href="http://chrome.google.com">Google Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>.  If you are using one of these browsers, your work should be saved if you refresh the page or come back later.<br/>
+    <div id="debug"></div>
   </body>
 </html>
